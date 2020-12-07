@@ -21,6 +21,7 @@ def commit_and_push():
 @click.command()
 @click.option('--path', '-p')
 def supercommit(path):
+    # TODO: Fix file name
     # TODO: Create repository
     # TODO: Create commit and push to it
 
