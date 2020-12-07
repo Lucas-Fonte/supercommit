@@ -1,5 +1,8 @@
-# add to ~/.bashrc first
+# add to ~/.zshrc first
 
 function supercommit() {
-    echo "super commit"
+    echo "Running supercommit..."
+    cd && cd ./projects/python/supercommit
+    python cli.py --path=$PWD
+
 }

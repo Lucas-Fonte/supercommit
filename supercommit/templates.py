@@ -1,4 +1,4 @@
-
+README_TEMPLATE = """
 <p align="center">
 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="logo" width="100px">
 
@@ -34,3 +34,4 @@ Project summary
 ## Usage
 
 Instructions on how to use it.
+"""
