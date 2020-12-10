@@ -1,11 +1,11 @@
 import click
 from supercommit.templates import README_TEMPLATE
 
-def create_readme(path: str):
-    print('> Creating README.md...');
+def create_readme(path: str, project: str):
+    print(f'> Creating README.md on {path}...');
 
-    file = open(f"{path}README.md","w+")
-    file.write(README_TEMPLATE)
+    file = open(f"{path}/README.md","w+")
+    file.write(README_TEMPLATE(project))
     file.close()
 
     print('> README.md created!');
@@ -20,12 +20,12 @@ def commit_and_push():
     
 @click.command()
 @click.option('--path', '-p')
-def supercommit(path):
-    # TODO: Fix file name
+@click.option('--project', '-pj')
+def supercommit(path, project='project'):
     # TODO: Create repository
     # TODO: Create commit and push to it
 
-    create_readme(path)
+    create_readme(path, project)
     create_repository()
     commit_and_push()
 

@@ -5,5 +5,5 @@ function supercommit() {
     echo "Running supercommit..."
     original_path=$PWD
     cd && cd ./projects/python/supercommit
-    python cli.py --path=$original_path
+    python cli.py --path=$original_path --project=$1
 }
