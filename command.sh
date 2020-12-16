@@ -11,16 +11,18 @@ function supercommit() {
     cd && cd ./projects/python/supercommit
     python cli.py --path=$original_path --project=$1
 
+    cd $original_path
 
     echo '> Initializing repository...'
     git init
 
     echo '> Adding files...'
     git add .
-    
+
     git commit -m "first commit"
     echo '> Code commited!'
 
+    git branch -M main
     hub create $1
     echo '> Repository created!'
     

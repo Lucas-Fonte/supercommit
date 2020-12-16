@@ -10,7 +10,8 @@ def create_readme(path: str, project: str):
 
     print('> README.md created!');
 
-    
+
+# path is being added by the shell function    
 @click.command()
 @click.option('--path', '-p')
 @click.option('--project', '-pj')
